@@ -18,7 +18,7 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/db355be3e3.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -130,7 +130,7 @@
                     recusandae, possimus modi</p>
             </div>
         </div>
-    </div> 
+    </div>
     <!-- Testimonials -->
 
     <div class="testimonials">
@@ -227,11 +227,12 @@
 
                 <div class="comment-box">
                     <h3>Leave a comment</h3>
-                    <form class="comment-form">
-                        <input type="text" placeholder="Enter Name">
-                        <input type="email" placeholder="Enter Email">
-                        <textarea rows="5" placeholder="Your comment"></textarea>
-                        <button type="submit" class="explore-btn visit-btn">Post comment</button>
+                    <form name="form" class="comment-form">
+                        <input type="text" placeholder="Enter Name" required>
+                        <input type="email" placeholder="Enter Email" required>
+                        <textarea rows="5" placeholder="Your comment" required></textarea>
+                        <button type="submit" class="explore-btn visit-btn">Post
+                            comment</button>
                     </form>
                 </div>
 
@@ -303,12 +304,12 @@
                     </div>
                 </div>
                 <div class="contact-col">
-                    <form >
-                        <input type="text" placeholder="Enter your name" required>
+                    <form>
+                        <input type="text"  placeholder="Enter your name" required>
                         <input type="email" placeholder="Enter email address" required>
                         <input type="text" placeholder="Enter your subject" required>
                         <textarea rows="8" placeholder="Message" required> </textarea>
-                        <button type="submit" class="visit-btn explore-btn">Send message</button>
+                        <button type="submit" class="visit-btn explore-btn" onclick="postComment()" >Send message</button>
                     </form>
                 </div>
             </div>
@@ -335,6 +336,11 @@
         }
         function hideMenu() {
             navLinks.style.right = "-200px"
+        }
+        function postComment() {
+        
+            alert("Your comment is submitted")
+
         }
     </script>
 </body>
